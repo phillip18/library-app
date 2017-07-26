@@ -8,10 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('about');
-<<<<<<< b3e2d5430d7785f9123888dba5401468714044bc
   this.route('contact');
-=======
->>>>>>> Lesson 1 - Creating a index and about pages among the navbar in the application.hbs
 });
 
 export default Router;
