@@ -39,7 +39,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+this app was deployed to firebase: https://library-app-4fce8.firebaseapp.com/
 
 ## Further Reading / Useful Links
 
