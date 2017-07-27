@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
 
 	actions: {
 
-		sendMessage() {
+    sendMessage() {
 			const email = this.get('emailAddress');
 			const message = this.get('textMessage');
 
@@ -27,4 +27,3 @@ export default Ember.Controller.extend({
 						});
 				}
 		}});
-
