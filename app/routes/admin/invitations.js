@@ -2,11 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-	model() {
-    return this.store.findAll('invitation');
-  },
+	beforeModel() {
+		this.get('session').fetch()
+	},
 
-  actions: {
+	model() {
+		return this.store.findAll('invitation');
+	},
+
+	actions: {
 
 		deleteInvitation(invitation) {
 			let confirmation = confirm('Are you sure?');

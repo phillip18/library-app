@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	
+
+  beforeModel() {
+    this.get('session').fetch()
+  },
+  
   model(params) {
     return this.store.findRecord('library', params.library_id);
   },

@@ -16,6 +16,10 @@ module.exports = function(environment) {
     storageBucket: "library-app-4fce8.appspot.com",
   },
 
+  torii: {
+     sessionServiceName: 'session',
+   },
+
   // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",

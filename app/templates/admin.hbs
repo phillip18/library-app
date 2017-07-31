@@ -1,0 +1,17 @@
+<div class="jumbotron text-center">
+	<h1 id="title">Login</h1>
+	<div class="form-horizontal form-group form-group-lg row">
+		<div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-8 col-md-offset-2">
+			{{#if session.isAuthenticated}}
+			<br><br>
+			<button class="btn btn-primary btn-lg btn-block" {{action 'logout'}}>Logout</button>
+			{{else}}
+			{{input type="text" class="form-control" value=userEmail placeholder="Email"}}<br>
+			{{input type="password" class="form-control" value=userPassword placeholder="Password"}}<br>
+			<div class="col-xs-9 col-xs-offset-1 col-sm-offset-0 col-sm-3 col-md-4">
+				<button class="btn btn-primary btn-lg btn-block" {{action "login" password}}> Login </button>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</div>
