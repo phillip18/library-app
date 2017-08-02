@@ -2,22 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  beforeModel() {
-    this.get('session').fetch()
-  },
-  
-  model() {
-    return this.store.findAll('library');
-  },
+	model() {
+		return this.store.findAll('library');
+	},
 
-  actions: {
+	actions: {
 
-    deleteLibrary(library) {
-      let confirmation = confirm('Are you sure?');
+		deleteLibrary(library) {
+			let confirmation = confirm('Are you sure?');
 
-      if (confirmation) {
-        library.destroyRecord();
-      }
-    }
-  }
+			if (confirmation) {
+				library.destroyRecord();
+			}
+		}
+	}
 });

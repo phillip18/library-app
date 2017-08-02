@@ -2,10 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  beforeModel() {
-    this.get('session').fetch()
-  },
-
   model() {
     return Ember.RSVP.hash({
       libraries: this.store.findAll('library'),

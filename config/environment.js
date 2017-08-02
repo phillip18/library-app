@@ -14,18 +14,18 @@ module.exports = function(environment) {
     authDomain: "library-app-4fce8.firebaseapp.com",
     databaseURL: "https://library-app-4fce8.firebaseio.com",
     storageBucket: "library-app-4fce8.appspot.com",
+
+    // if using ember-cli-content-security-policy
+  contentSecurityPolicy: {
+    'script-src': "'self' 'unsafe-eval' apis.google.com",
+    'frame-src': "'self' https://*.firebaseapp.com",
+    'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com",
+    }
   },
 
   torii: {
      sessionServiceName: 'session',
    },
-
-  // if using ember-cli-content-security-policy
-    contentSecurityPolicy: {
-      'script-src': "'self' 'unsafe-eval' apis.google.com",
-      'frame-src': "'self' https://*.firebaseapp.com",
-      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
-    },
 
     EmberENV: {
       FEATURES: {
