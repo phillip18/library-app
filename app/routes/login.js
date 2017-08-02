@@ -1,14 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
 	beforeModel(){
-		let session = this.get('session');
-		if(!session.get('isAuthenticated')){
-			this.transitionTo('login');
-		}
+		this.session.fetch();
 	},
-
+	
 	actions: {
 		login: function() {
 			var controller = this.get('controller');
